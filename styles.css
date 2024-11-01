@@ -1,0 +1,265 @@
+:root {
+    --background-color-brown: hsl(23, 50%, 40%);
+    --background-color-darkbrown: hsl(23, 38%, 27%);
+    --background-color-lightbrown: hsl(23, 44%, 53%);
+    --background-color-red: rgb(190, 26, 26);
+    --warden-green: hsl(109, 18%, 30%);
+    --warborn-blue: hsl(206, 34%, 29%);
+    --capital-gold: hsl(46, 65%, 43%);
+    --transparent: rgba(255, 0, 0, 0);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: hsl(23, 100%, 89%);
+    font-family: Helvetica, sans-serif;
+}
+
+body {
+    background-color: var(--background-color-brown);
+}
+
+header {
+    background-color: blue;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    background-image: linear-gradient(var(--background-color-darkbrown) 2%,
+                                      var(--background-color-lightbrown) 10%, 
+                                      var(--background-color-brown) 90%,
+                                      var(--background-color-darkbrown) 92%, 
+                                      var(--transparent) 100%);
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    z-index: 10;
+}
+
+#nav-container {
+    width: 60%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#nav-first-row {
+    height: 60%;
+    display: flex;
+}
+
+#logo-title {
+    align-content: left;
+    display: flex;
+}
+
+#bttc-text {
+    height: 30px;
+    align-content: flex-end;
+    margin: auto;
+    margin-left: 16px;
+}
+
+#social-media-links {
+    margin-top: auto;
+    margin-left: auto;
+    margin-bottom: auto;
+    display: flex;
+    align-items: flex-end;
+}
+
+.twitch-link {
+    height: 30px;
+    width: 30px;
+    background-image: url("./sprites/twitch-logo.png");
+    background-size: cover;
+    margin-bottom: 4px;
+}
+
+.youtube-link {
+    height: 40px;
+    width: 40px;
+    background-image: url("./sprites/youtube-logo.png");
+    background-size: cover;
+    margin-left: 1em;
+}
+
+#nav-second-row {
+    height: 30%;
+    align-content: center;
+    padding-left: 78px;
+}
+
+.nav-link {
+    margin-right: 2em;
+    font-size: 1.2rem;
+}
+
+.nav-link:hover {
+    color: linen;
+}
+
+.logo {
+    height: 60px;
+    width: 60px;
+}
+
+#home-section {
+    width: 100vw;
+    height: 100vh;
+    top: 90px;
+    background: url("./sprites/tavern-sprite.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#home-section img {
+    width: 310px;
+    margin-bottom: 20px;
+}
+
+#home-section p, #factions-title-section p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.8rem;
+    color: hsl(50, 36%, 66%);
+    text-shadow: 4px 4px 4px black;
+}
+
+.first-divider {
+    border-color: var(--background-color-brown);
+    margin: auto;
+    margin-top: 100px;
+    width: 90%;
+}
+
+.divider {
+    border-color: var(--background-color-brown);
+    width: 90%;
+}
+
+#factions-title-section {
+    width: 100vw;
+    height: 40vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 90px;
+    background-image: linear-gradient(var(--background-color-darkbrown) 2%,
+                                      var(--background-color-lightbrown) 10%, 
+                                      var(--background-color-brown) 90%,
+                                      var(--background-color-darkbrown) 92%, 
+                                      hsl(23, 75%, 11%));
+}
+
+#factions-title-section img {
+    height: auto;
+    width: 60%;
+    margin-bottom: 1em;
+}
+
+#factions-title-section p {
+    font-size: 3rem;
+    text-shadow: 1px 1px 2px black;
+    text-decoration: underline;
+}
+
+#wardens-section {
+    background: linear-gradient(var(--warden-green) 2%,
+                              hsl(110, 30%, 50%) 6%,
+                              hsl(110, 15%, 80%) 7%,
+                              hsl(110, 30%, 50%) 8%,
+                              hsl(110, 28%, 36%) 70%,
+                                var(--warden-green) 92%, 
+                              hsl(111, 70%, 11%) 100%);
+    width: 100vw;
+    height: 50vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#wardens-section img {
+    height: 200px;
+    margin: 0 330px 0 150px;
+    padding-right: 100px;
+}
+
+#wardens-section p {
+    color: hsl(106, 23%, 74%);
+    text-shadow: 0 5px 5px hsla(106, 23%, 74%, 0.4);
+}
+
+#warborn-section {
+    background: linear-gradient(hsl(205, 48%, 12%) 1%,
+                                var(--warborn-blue) 2%,
+                              hsl(206, 30%, 50%) 6%,
+                              hsl(206, 15%, 80%) 7%,
+                                hsl(206, 30%, 50%) 8%, 
+                              hsl(206, 28%, 36%) 70%,
+                                var(--warborn-blue) 92%,
+                                hsl(205, 48%, 12%) 100%);
+    width: 100vw;
+    height: 50vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#warborn-section img {
+    height: 200px;
+    margin: 0 154px 0 344px;
+}
+
+#warborn-section p {
+    color: hsl(206, 28%, 71%);
+    text-shadow: 0 7px 5px hsla(206, 28%, 71%, 0.4);
+}
+
+#capital-section {
+    background: linear-gradient(hsl(46, 48%, 12%) 1%,
+                                var(--capital-gold) 2%,
+                              hsl(46, 61%, 51%) 6%,
+                              hsl(46, 40%, 74%) 7%,
+                              hsl(46, 61%, 51%) 8%, 
+                              var(--capital-gold) 70%,
+                              hsl(46, 61%, 51%) 92%,
+                                hsl(46, 48%, 12%) 100%);
+    width: 100vw;
+    height: 50vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#capital-section img {
+    height: 200px;
+    margin: 0 164px 0 114px;
+}
+
+#capital-section p {
+    color: hsl(46, 45%, 77%);
+    text-shadow: 0 7px 5px hsla(46, 45%, 77%, 0.4);
+}
+
+#wardens-section p, #warborn-section p, #capital-section p {
+    font-size: 2rem;
+    text-align: center;
+}
